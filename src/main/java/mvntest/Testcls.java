@@ -5,23 +5,28 @@
 	
 	public class Testcls {
 		
-	//	public String lent;
+		public String lentx;
+		public String zemyn;
 		//public String[] laukai;
 		//public String[] n_pav;
 		//public String sal;
 		//public String comma;
 		 public BufferedReader br;
 		 public String line;
+		 public int[] lent;
+		 public int temp;
+		 public int suma;
 		// public Double;
 		
 		public Testcls() {
+			
 		}
 		
-		/*public Testcls ( String lentele, String[] laukeliai ) {
+		public Testcls ( int[] lentele ) {
 			
-			//lent = lentele;
-		//	laukai = laukeliai;
-		}*/
+			lent = lentele;
+
+		}
 		
 		public void skaiciavimas () {
 		
@@ -58,5 +63,53 @@
 			System.out.println ( "Pabaiga\n" );
 	
 		}
+		
+		public String lentele () {
+		
+			lentx = "";
+			
+			for ( int i = 0; i<lent.length; i++ ) {
+
+			lentx += ( ( lent [i] ) + "\n" );
+			}
+					
+			return lentx;
+		}
+		
+		public int[] perrikiuotZemyn() {
+
+		temp = 0;
+      
+			for (int i = 0; i < lent.length; i++) {     
+				for (int j = i+1; j < lent.length; j++) {     
+					if(lent[i] < lent[j]) {    
+					temp = lent[i];    
+					lent[i] = lent[j];    
+					lent[j] = temp;    
+				}     
+            }     
+        }    
+				
+		
+			return lent; 
+		}
+		
+		public void spausdintMasyva() {
+			
+			for (int i = 0; i <lent.length; i++){
+			
+			System.out.println (lent[i]);
+			
+			}
+		}
+		
+		public int sudeti(){
+			suma = 0;
+			for (int i = 0; i < lent.length; i++) { 
+				suma = suma + lent [i];
+			}
+			return suma;
+		}
+		//return skaiciu*/
 		
 	}
