@@ -110,6 +110,5 @@
 			}
 			return suma;
 		}
-		//return skaiciu*/
 		
 	}
